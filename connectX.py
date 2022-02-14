@@ -103,7 +103,6 @@ class connectX:
         return 1
 
     def evaluate(self, grid):
-        #Fix bug: numThree = self.countWindows(grid, 3, 1->2)
         numThree = self.countWindows(grid, 3, 2)
         numFour = self.countWindows(grid, 4, 2)
         numThreeOpp = self.countWindows(grid, 3, 1)
@@ -182,17 +181,6 @@ class connectX:
 
         return bestMove
 
-    # def debug(self, node):
-    #     tmp = self.dropPiece(node, 2, 1)
-    #     print(node)
-    #     print(tmp)
-
-# def debug():
-#     game = connectX()
-#     node = np.asarray([0]*42).reshape(6,7)
-#     game.debug(node)
-
-# debug()
 def main():
     game = connectX()
     game.gamePlay()
